@@ -2,7 +2,7 @@
 % GNU courseware, XIN YUAN, 2017
 %
 
-\section{遗传程序设计}\fontsize{10pt}{10pt}\selectfont
+\section{遗传程序设计}
 
 \frame{
 \centerline{\textbf{\Huge{遗传程序设计}}}
@@ -32,21 +32,10 @@
 \parindent=19pt	
 \renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
 \raggedright
-遗传程序设计是借鉴生物界的自然选择和遗传机制，在遗产算法的基础上发展起来的搜索算法，以树型结构作为个体结构的遗传算法称为遗传程序设计。
+遗传程序设计简称GP，是一种从生物演化过程得到灵感的自动化生成和选择计算机程序来完成用户定义的任务的技术。
 }
 
-\frame{\frametitle{思想}
-\parindent=19pt	
-\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
-\raggedright
-在标准的遗传算法中，由定长字符串组成的群体借助于复制、交叉、变异等遗传操作不断进化找到问题的最优解或次优解。
-
-遗传程序设计运用遗传算法的思想，常采用树的结构来表示计算机程序，从而解决问题。
-
-对于许多问题，包括人工智能和机器学习上的问题都可看做是需要发现一个计算机程序，即对特定输入产生特定输出的程序，形式化为程序归纳，那么遗传程序设计提供了实现程序归纳的方法。
-}
-
-\frame{\frametitle{基本原理}
+\frame{\frametitle{原理}
 \parindent=19pt	
 \renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
 \raggedright	
@@ -71,7 +60,7 @@
 \parindent=19pt	
 \renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
 \raggedright	
-对程序设计问题，先产生一个不费事的有错误的解，然后再修改使它正确工作，这种做法一般要比坚持要求第一个解就完全没有缺陷的做法有效的多。遗传程序设计正是基于这样一种思想而发展起来的，它通过树的改变分层节点和结构链接关系来优化以判断是否满足终止准则，从而得到最优解。
+对程序设计问题，先产生一个不费事的有错误的解，然后再修改使它正确工作，这种做法一般要比坚持要求第一个解就完全没有缺陷的做法有效的多。遗传程序设计正是基于这样一种思想而发展起来的，它通过树的改变分层节点和结构链接关系来优化以判断是否满足终止准则，不断选择从而得到最优解。
 }
 
 \frame{\frametitle{流程图}
@@ -193,7 +182,7 @@ LISP程序的主体由类似于(*nn)和(if(< x 0)(-x)(x))的一些S-表达式所
 		
 			<1> 首先建立一个根结点，从函数集F中随机地选择一个函数作为根结点的标记；
 		
-			<2> 每当树中的一个结点被标记为函数集F中的一个函数f后，则为该结点建立z(f)个儿子结点，而每个儿子结点的标记从C=FYT中随机地选取；
+			<2> 每当树中的一个结点被标记为函数集F中的一个函数$f$后，则为该结点建立$z(f)$个儿子结点，而每个儿子结点的标记从$C=F \bigcup T$中随机地选取；
 		
 			<3> 每当树中一个结点被标记为端点集T中的一个元素时，则该结点成为树的一个叶结点；
 		
@@ -208,25 +197,11 @@ LISP程序的主体由类似于(*nn)和(if(< x 0)(-x)(x))的一些S-表达式所
 		\item<1-> 假定F=\{+,-,*,/\}，T=\{a,b,c,d\}。下面给出了建立一棵树结构的过程：
 			\begin{figure}[ht]
 			\centering	
-			\includegraphics[scale=0.3]{../images/build_tree.png}
+			\includegraphics[scale=0.5]{../images/build_tree.png}
 			\caption{语法树的构建}
 			\label{fig:label}
 			\end{figure}
-		\item<2->上述树生成过程可以有几种不同的实现方式：
-		
-			<1> 完全法：该方法预先定义所要生成的树的最大深度Di，当要生成的结点的深度小于最大深度时，则从函数集F中随机地选取一个元素作为该结点的标记，当要生成的结点的深度等于最大深度时，则从端点集T中随机地选取一个元素作为该结点的标记。
 	\end{itemize}
-}
-
-\frame{\frametitle{初始化}
-	\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
-	\raggedright	
-	<2> 生长法：该方法预先定义所要生成的树的最大深度Di，当要生成的结点的深度小于最大深度时，则从    中随机地选取一个元素作为该结点的标记，当要生成的结点的深度等于最大深度时，则从端点集T中随机地选取一个元素作为该结点的标记。
-	
-	<3> 混合法：该方法预先定义所要生成的树的最大深度Di，对从2至最大深度的每一个深度，生成相同个数的树。对每一个深度，其中一半的树用完全法生成，而另一半用生成方法生成。
-
-	\parindent=19pt		
-	例如，假定树的最大深度定义为6，种群中个体的个数为100，则用混合方法将分别产生深度为2,3,4,5,6的树各20个，其中深度为的树有10个用完全法产生，有10个用生成方法产生。
 }
 
 \frame{\frametitle{适应函数}
@@ -338,36 +313,27 @@ LISP程序的主体由类似于(*nn)和(if(< x 0)(-x)(x))的一些S-表达式所
 	(1) 复制
 	
 	复制算子首先按照某种基于适应性函数值比例的选择策略从种群中选择一个个体，然后将该个体不加改变地复制到下一代种群。
-
-    复制算子有一个参数$p_{r}$，通常取$p_{r}=0.1$。
 	
 	(2) 杂交
 
     杂交算子分别从两个父体中随机地选择一个杂交点，然后交换父体中以杂交点为根结点的子树产生两个后代。
-        \begin{figure}[ht]
-			\centering	
-			\includegraphics[scale=0.25]{../images/Hybridization1.png}
-			\caption{x的取值}
-			\label{fig:label}
-		\end{figure}
 }
 
 \frame{\frametitle{遗传算子}
 	\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
 	\raggedright	
-        \begin{figure}[ht]
-			\centering	
-			\includegraphics[scale=0.25]{../images/Hybridization2.png}
-			\caption{x的取值}
-			\label{fig:label}
-		\end{figure}
-
-    \parindent=19pt	
-    杂交算子有两个参数 $p_{c}$和$p_{cn}$，$p_{c}$是按概率选择遗传算子时选择杂交算子的概率，而$p_{cn}$是在进行杂交时，在父体中选择内结点作为杂交点的概率。通常取$p_{c}=0.9$和$p_{cn}=0.9$。
-
-    在对父体进行杂交后，后代树的深度有可能加大。为了有效地利用计算机资源，防止产生巨型个体，遗传程序设计通常设置一个最大允许深度  $D_{c}$进行控制。
-
-    若杂交后，有一个后代的深度超过了最大允许深度，则随机地选取一个父体代替该后代；若两个后代的深度都超过了最大允许深度，则用两个父体代替这两个后代。
+ 	\begin{figure}[ht]
+		\centering	
+		\includegraphics[scale=0.35]{../images/Hybridization1.png}
+		\caption{杂交前}
+		\label{fig:label}
+	\end{figure}
+     \begin{figure}[ht]
+		\centering	
+		\includegraphics[scale=0.35]{../images/Hybridization2.png}
+		\caption{杂交后}
+		\label{fig:label}
+	\end{figure}
 }
 
 \frame{\frametitle{遗传算子}
@@ -379,15 +345,10 @@ LISP程序的主体由类似于(*nn)和(if(< x 0)(-x)(x))的一些S-表达式所
     变异算子首先在父体中随机地选择一个结点，然后删除以该结点为根结点的子树，并在该结点处插入一个随机生成的子树。
         \begin{figure}[ht]
 			\centering	
-			\includegraphics[scale=0.25]{../images/variation.png}
-			\caption{x的取值}
+			\includegraphics[scale=0.5]{../images/variation.png}
+			\caption{变异}
 			\label{fig:label}
-		\end{figure}
-	
-	变异算子有两个参数$p_{m}$和$p_{mm}$。$p_{m}$是按概率选择遗传算子时选择变异算子的概率，而$p_{mm}$是在进行变异时，在父体中选择内结点的概率。
-	
-	值得注意的是J.R.Koza建议$p_{m}$，也就是说在遗传程序设计中不使用变异算子。近年来的遗传程序设计实践建议使用变异算子，但是以较低的概率。
-	
+		\end{figure}	
 }
 
 \frame{\frametitle{应用}
@@ -516,11 +477,11 @@ LISP程序的主体由类似于(*nn)和(if(< x 0)(-x)(x))的一些S-表达式所
 	\parindent=19pt	
 	\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
 	\raggedright
-	遗传程序设计作为一种优化算法具有不需要先验性假设而可以进行全局搜索和进化最终得到最优解的特点，近年来人们在研究使用这种算法的过程中，也针对实际应用对其作了一些相应的改进。
+	遗传程序设计作为一种优化算法具有不需要先验性假设而可以进行全局搜索和进化最终得到最优解的特点，近年来人们在研究使用这种算法的过程中，也针对实际应用对其作了一些相应的改进：
 	
 	遗传程序设计主要处理树状具有分层结构的程序，在实际编程中多采用LISP语言实现。LISP语言由于缺乏统一的标准和方便的对外接口，作为一种解释语言运行速度较慢，可以采用几种具有不同数据类型的语言如PROL0G和C语言来加速程序进化的进程。
 	
-	传统的遗传程序设计限制少、搜索速度慢，可以用定向的非周期图(DAG)取代树和森林存储程序群体，针对子树进行改进，以节省程序的运行时间和空间。
+	传统的遗传程序设计限制少、搜索速度慢，可以用定向的非周期图(DAG)取代树和森林来存储程序群体，或针对子树进行改进，以节省程序的运行时间和空间。
 	
 	在算法方面，遗传程序设计可以与包括遗传算法、神经网络和模拟退火等的其他优化方法相结合，以得到更好的应用。
 }
