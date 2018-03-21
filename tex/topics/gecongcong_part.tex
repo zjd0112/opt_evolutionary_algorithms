@@ -1,0 +1,73 @@
+﻿%
+% GNU courseware, XIN YUAN, 2017
+%
+
+\section{演化规划(EPA)}
+
+\frame{
+\centerline{\textbf{\Huge{演化规划}}}
+}
+
+\frame{\frametitle{定义}
+
+\begin{block}{定义}
+%From Wikipedia:\\Evolutionary programming is one of the four major evolutionary algorithm paradigms. It is similar to genetic programming, but the structure of the program to be optimized is fixed, while its numerical parameters are allowed to evolve.进化规划是四种主要的演化算法之一。 它与遗传算法类似，但要优化的程序结构是固定的，而其数值参数则可以进化。
+~
+
+演化规划(Evolutionary Programming Algorithm, EPA)是由美国学者Lawrence J. Fogel于1960年提出的，它适用于解决目标函数或约束条件不可微的复杂非线性实值连续优化问题。它与遗传算法类似，但要优化的程序结构是固定的，而其数值参数则可以进化。
+\end{block}
+}
+\begin{algorithm}
+\caption{Evolutionary Programming Algorithm}
+    \KwIn{个体表现型$X$, 群体规模$N$, 迭代次数$G$等}
+    \KwOut{子代}
+    	随机产生初始群体并计算适应值(含$N$个个体)\\
+        \While{not done}{
+        //终止条件：达到规定的进化代数，或若干代内种群中最好个体的函数值不再发生变化，则终止进化\\
+        	\For{$\rm i = 1;i < N; i++$}
+        	{
+           		对$X_i$进行变异得到$X_i'$\\
+				对$X_i$进行可行性检查\\
+				计算$X_i$的适应值\\
+
+        	}
+        	从$2N$个个体中选择$N$个个体 //随机型q-竞争法\\
+        }
+        return 子代\;
+\end{algorithm}
+\frame{\frametitle{思想}
+EP模拟生物种群层次上的进化，因此在进化过程中主要强调生物种群行为上的联系，即强调种群层次上的行为进化而建立父、子代间的行为链。
+~
+
+EP算法最重要的一个操作是变异操作。通过变异，父代群体中的每一个个体产生一个子代个体，父代和子代中最好的那一半被选择生存下来。
+}
+
+\frame{\frametitle{q-竞争选择算法}
+演化规划算法的选择策略采用的是q-竞争机制，这也是与进化策略算法最大的不同点，q-竞争说白了就是选择优质解的同时，以一定的随机概率接受较差的解。多数是优解，少数是比较差的解，共同组成一组父代，为下一次进化做准备。
+}
+
+\frame{\frametitle{q-竞争选择算法}
+\textbf{思想}\\
+将N个父代进化的N个子代一起放在一起，从中随机选择不重复q个个体组成一个组，然后依次对2N个个体的每一个个体进行计分，将2N个依次每次一个与随机挑选出的群组的每一个成员进行比较，相比优的话，则会对应的个体的分数加1，最后对分数进行排序，选择分数最高的N个个体！
+}
+
+\frame{\frametitle{缺点}
+	大量的研究证明，由于过度选择、变异操作破坏有效模式、参数选取不当等原因，该算法存在一些亟待克服
+的\textbf{缺点}：\\
+（1）容易出现早熟收敛现象\\
+（2）进化后期，个体之间的竞争趋缓导致算法后期的搜索效率降低等。
+}
+
+\frame{\frametitle{改进}
+	\begin{itemize}
+		\item<1-> 基于柯西变异的进化规划算法 1996
+		% 该算法能够较好地克服早熟收敛现象，但是后期搜索的效率很低
+		\item<2-> 基于Lévy概率分布的进化规划算法(LEP) 2004
+		% 在该算法中使用Lévy分布变异算子代替高斯分布变异算子，其思想是使用具有更大方差的变异算子来促使种群更快地收敛到最优解，但编制Lévy 算子较为困难，且使用大方差的变异算子使种群收敛到最优解的速度变慢。
+		\item<3-> 一种求解数值优化问题的快速进化规划算法 2004
+		% 在该算法中，对变异算子进行了改进，对成功的变异进行适当延伸，当个体变异失败时，对变异量实施Gauss或Cauchy扰动，其思想是利用高斯变异算子良好的局部搜索能力和柯西变异算子良好的全局探索能力，以期能快速收敛到最优解。但是同时使用两种变异方式，导致算法的计算复杂度增加，算法的收敛速度受到影响
+		\item<4-> ... 
+	\end{itemize}
+}
+
+%end
