@@ -97,9 +97,18 @@ $$
 \end{frame}
 
 \subsection{应用实例}
-	\begin{frame}{差分进化算法寻找函数最优解}
-	定义关于参数$x, y$的函数，函数图像如左图所示
+\begin{frame}{差分进化算法寻找函数最优解}
+	定义关于参数$x, y$的函数表达式如下：
 	$$f(x,y)=-20e^{-0.2\sqrt{\frac{x^2+y^2}{2}}}-e^{\frac{\cos2\pi x+\cos2\pi y}{2}}+20+e$$
+	求函数的最小值。
+	\begin{itemize}
+		\item 个体定义：$P$, $P[0]$表示$x$, $P[1]$表示$y$。
+		\item 取值范围：$-5 < x, y < 5$。
+		\item 适应度定义：$f(x,y)$。
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{差分进化算法寻找函数最优解}
 	用差分进化算法求解，效果如右图所示（参数设置：$N=20, F=0.5, cr=0.5$，迭代次数 $T=300$）
 	\begin{columns}
 		\begin{column}{0.45\textwidth}
