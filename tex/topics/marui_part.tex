@@ -2,11 +2,11 @@
 % GNU courseware, XIN YUAN, 2017
 %
 
-\section{演化策略}
+\section{演化策略}\fontsize{10pt}{10pt}\selectfont
 
-\frame{
-\centerline{\textbf{\Huge{演化策略}}}
-}
+% \frame{
+% \centerline{\textbf{\Huge{演化策略}}}
+% }
 
 \frame{\frametitle{定义}
 
@@ -69,14 +69,14 @@
 		
 		\item<2-> 求解该问题的演化策略设计如下：
 		  \begin{itemize}
-		     \item<1-> 表示
-		\\
-		       \includegraphics[width=0.8\textwidth]{algorithm2.jpg}
-		     \item<2-> 适应函数：适应函数取为目标函数。
-		     \item<3-> 重组算子：对变量部分使用离散重组，对策略参数部分使用全局中值重组。 
-		     \item<4-> 存活选择：使用（$\mu$，$\lambda$）选择，其中$\mu$=30，$\lambda$）=200。
-		     \item<5-> 终止准则：当进行200000次函数值计算或发现最优解后终止算法。
-		     \item<6-> 种群初始化：初始种群中每个个体的变量部分随机地产生，每个分量均匀地分布在区间       内。每个个体的变异步长都相同，设为$\theta$=3。  
+		    \item<1-> 表示
+			\\
+		       \includegraphics[width=0.4\textwidth]{algorithm2.jpg}
+		    \item<2->\small 适应函数：适应函数取为目标函数。
+		    \item<3->\small 重组算子：对变量部分使用离散重组，对策略参数部分使用全局中值重组。 
+		    \item<4->\small 存活选择：使用（$\mu$，$\lambda$）选择，其中$\mu$=30，$\lambda$）=200。
+		    \item<5->\small 终止准则：当进行200000次函数值计算或发现最优解后终止算法。
+		    \item<6->\small 种群初始化：初始种群中每个个体的变量部分随机地产生，每个分量均匀地分布在区间       内。每个个体的变异步长都相同，设为$\theta$=3。  
 	
 	      \end{itemize}
 		\item<3-> 运行上述算法10次，每次找到的最好解都位于全局最优峰上。

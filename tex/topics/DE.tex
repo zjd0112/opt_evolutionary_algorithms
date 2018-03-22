@@ -22,7 +22,7 @@
 \begin{frame}{算法框架}\small
 	\begin{figure}
 		\includegraphics [width =1.0\textwidth]{../images/framework.png}
-		\vspace{-1.2cm}
+		% \vspace{-1.0cm}
 	\end{figure}
 	\begin{itemize}
 		\item {\bf 种群初始化}在解空间中随机、均匀地产生$M$个个体，每个个体由$n$个染色体组成，作为第$0$代种群，标记为
@@ -40,6 +40,12 @@
 			\end{split}
 		\end{equation*}
 	\end{itemize}
+\end{frame}
+
+\begin{frame}{算法框架}
+	\begin{center}
+		\huge 与遗传算法的区别？
+	\end{center}
 \end{frame}
 
 \begin{frame}{种群初始化}
@@ -101,28 +107,35 @@ $$
 	定义关于参数$x, y$的函数表达式如下：
 	$$f(x,y)=-20e^{-0.2\sqrt{\frac{x^2+y^2}{2}}}-e^{\frac{\cos2\pi x+\cos2\pi y}{2}}+20+e$$
 	求函数的最小值。
+	\begin{figure}
+		\includegraphics [width =0.7\textwidth]{../images/function.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{差分进化算法寻找函数最优解}
+	用差分进化算法求解，
 	\begin{itemize}
 		\item 个体定义：$P$, $P[0]$表示$x$, $P[1]$表示$y$。
 		\item 取值范围：$-5 < x, y < 5$。
 		\item 适应度定义：$f(x,y)$。
 	\end{itemize}
-\end{frame}
-
-\begin{frame}{差分进化算法寻找函数最优解}
-	用差分进化算法求解，效果如右图所示（参数设置：$N=20, F=0.5, cr=0.5$，迭代次数 $T=300$）
-	\begin{columns}
-		\begin{column}{0.45\textwidth}
-			\begin{figure}
-				\vspace{-0.8cm}
-				\includegraphics [width =2.0in]{../images/function.png}
-			\end{figure}
-		\end{column}
-		\begin{column}{0.55\textwidth}
-			\begin{figure}
-				\includegraphics [width =2.0in]{../images/curve.png}
-			\end{figure}
-		\end{column}
-	\end{columns}
+	效果如右图所示（参数设置：$N=20, F=0.5, cr=0.5$，迭代次数 $T=150$）
+	\begin{figure}
+		\includegraphics [width =0.8\textwidth]{../images/curve.png}
+	\end{figure}
+	% \begin{columns}
+	%	\begin{column}{0.45\textwidth}
+	%		\begin{figure}
+	%			\vspace{-0.8cm}
+	%			\includegraphics [width =2.0in]{../images/function.png}
+	%		\end{figure}
+	%	\end{column}
+	%	\begin{column}{0.55\textwidth}
+	%		\begin{figure}
+	%			\includegraphics [width =2.0in]{../images/curve.png}
+	%		\end{figure}
+	%	\end{column}
+	% \end{columns}
 \end{frame}
 
 \subsection{优缺点}
@@ -165,7 +178,7 @@ $$
 
 \begin{frame}{参数的自适应调整($cr$)}
 	对于适应度好的解，取较小的$cr$，使得该解进入下一代的机会增大；
-	对于适应度差的解，则取交大的$cr$，加快改变该个体的结构，使该解被淘汰掉。
+	对于适应度差的解，则取较大的$cr$，加快改变该个体的结构，使该解被淘汰掉。
 	$$
 	cr_i =
 	\begin{cases}
