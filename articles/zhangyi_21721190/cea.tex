@@ -10,16 +10,20 @@
 
 \documentclass[a4paper]{article}
 
-\usepackage{ctex}
+\usepackage{ctex}       % support chinese
+\usepackage{geometry}   % setting margin
+\usepackage{setspace}   % setting space
 
 
 \title{多种群协同进化}
 \date{2018-04-30}
 \author{张毅}
 
+\geometry{left=3.5cm,right=3.5cm,top=4.5cm,bottom=4.5cm}
 
 \begin{document}
     
+    \doublespacing
     \pagenumbering{gobble}
     \maketitle
     \newpage
@@ -29,5 +33,10 @@
     \newpage
 
     \section{背景}
+
+    协同演化算法(coevolutionary algorithm, CEA)针对演化算法的不足而兴起.它模拟生物协同演化的思想,通过构造两个或者多个种群,建立他们之间的竞争或者合作关系,使多个种群通过相互作用来提高各自的性能,适应复杂系统的动态演化环境,以达到种群优化的目的.
+
+    与协同演化算法相比,演化算法只采用了基于个体自身适应度的演化模式,没有考虑其演化的环境与个体之间的复杂联系,它在应用中表现出了易出现未成熟收敛且收敛速度慢的问题.协同演化算法可以利用少数起演化导向作用的个体,减少不必要的计算量,使收敛速度加快.
+
 
 \end{document}
