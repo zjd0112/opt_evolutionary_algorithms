@@ -11,6 +11,9 @@
 *.cb
 *.cb2
 
+## only apply to yizhangzc, simply because of personal habits
+yi.txt
+
 ## Intermediate documents:
 *.dvi
 *-converted-to.*
