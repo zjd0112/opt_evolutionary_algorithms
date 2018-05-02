@@ -11,9 +11,12 @@
 
 \documentclass[a4paper]{article}
 
-\usepackage{ctex}       % support chinese
-\usepackage{geometry}   % setting margin
-\usepackage{setspace}   % setting space
+\usepackage{ctex}           % support chinese
+\usepackage{geometry}       % setting margin
+\usepackage{setspace}       % setting space
+\usepackage{algorithm}      % support pseudocode
+\usepackage{algpseudocode}  % support pseudocode
+\usepackage{caption}        % support caption
 
 
 \title{多种群协同进化}
@@ -22,10 +25,10 @@
 
 \geometry{left=3.5cm,right=3.5cm,top=4.5cm,bottom=4.5cm}
 \setcounter{tocdepth}{2}
+\doublespacing
 
 \begin{document}
     
-    \doublespacing
     \pagenumbering{gobble}
     \maketitle
 
@@ -51,6 +54,18 @@
 
     \newpage
     \section{协同进化算法}
+
+    \begin{algorithm}
+        
+        \caption{the framework of Coevolutionary algorithm}
+        \label{alg1}
+
+        \begin{algorithmic}[1]
+            \State $a$
+        \end{algorithmic}
+
+    \end{algorithm}
+
 
     \subsection{竞争型协同进化算法}
 
