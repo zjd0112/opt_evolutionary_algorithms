@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}演化规划简介}{2}
+\contentsline {subsection}{\numberline {1.1}概念与背景}{2}
+\contentsline {subsection}{\numberline {1.2}演化规划的基本结构}{2}
+\contentsline {section}{\numberline {2}演化规划的实现技术}{2}
+\contentsline {subsection}{\numberline {2.1}变异操作}{3}
+\contentsline {subsection}{\numberline {2.2}父体选择}{4}
+\contentsline {section}{\numberline {3}演化规划的缺陷与改进方法}{4}
+\contentsline {subsection}{\numberline {3.1}演化规划的缺陷}{4}
+\contentsline {subsection}{\numberline {3.2}改进方法与研究进展}{5}
