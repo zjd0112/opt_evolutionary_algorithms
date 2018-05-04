@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{bornholdt1992general}
+S.~Bornholdt and D.~Graudenz, ``General asymmetric neural networks and
+  structure design by genetic algorithms,'' {\em Neural networks}, vol.~5,
+  no.~2, pp.~327--334, 1992.
+
+\bibitem{sebald1994minimax}
+A.~V. Sebald and J.~Schlenzig, ``Minimax design of neural net controllers for
+  highly uncertain plants,'' {\em IEEE Transactions on Neural Networks},
+  vol.~5, no.~1, pp.~73--82, 1994.
+
+\bibitem{yao1997new}
+X.~Yao and Y.~Liu, ``A new evolutionary system for evolving artificial neural
+  networks,'' {\em IEEE transactions on neural networks}, vol.~8, no.~3,
+  pp.~694--713, 1997.
+
+\bibitem{lee2004evolutionary}
+C.-Y. Lee and X.~Yao, ``Evolutionary programming using mutations based on the
+  l{\'e}vy probability distribution,'' {\em IEEE Transactions on Evolutionary
+  Computation}, vol.~8, no.~1, pp.~1--13, 2004.
+
+\bibitem{tongchim2004parallel}
+S.~Tongchim and X.~Yao, ``Parallel evolutionary programming,'' in {\em
+  Evolutionary Computation, 2004. CEC2004. Congress on}, vol.~2,
+  pp.~1362--1367, IEEE, 2004.
+
+\bibitem{wang2006novel}
+X.~Wang, D.~Xiang, T.~Jiang, C.-S. Lin, S.-G. Gong, and X.~Fang, ``A novel
+  bi-group evolutionary programming,'' {\em CHINESE JOURNAL OF
+  COMPUTERS-CHINESE EDITION-}, vol.~29, no.~5, p.~835, 2006.
+
+\end{thebibliography}
