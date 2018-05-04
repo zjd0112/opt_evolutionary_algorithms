@@ -4,5 +4,5 @@
 
 ## 编译环境
 
-软件：MiKTex
+软件：MiKTex  
 编译选项：pdfLaTex+MakeIndex+BibTex
