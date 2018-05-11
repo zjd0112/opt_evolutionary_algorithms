@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {1}演化策略简介}{2}
+\contentsline {subsection}{\numberline {1.1}概念与背景}{2}
+\contentsline {subsection}{\numberline {1.2}演化策略的一般结构}{2}
+\contentsline {subsubsection}{\numberline {1.2.1}(1+1)-演化策略 }{2}
+\contentsline {subsubsection}{\numberline {1.2.2}$(\mu ,\lambda )$,$(\mu +\lambda )$-演化策略 }{2}
+\contentsline {section}{\numberline {2}演化策略的实现技术}{3}
+\contentsline {subsection}{\numberline {2.1}表示}{3}
+\contentsline {subsection}{\numberline {2.2}变异}{3}
+\contentsline {subsection}{\numberline {2.3}重组}{3}
+\contentsline {subsection}{\numberline {2.4}父体选择}{4}
+\contentsline {subsection}{\numberline {2.5}存活选择}{4}
+\contentsline {section}{\numberline {3}演化策略的应用实例}{4}
+\contentsline {subsection}{\numberline {3.1}Ackley函数极小化问题}{4}
+\contentsline {subsection}{\numberline {3.2}演化策略设计}{4}
